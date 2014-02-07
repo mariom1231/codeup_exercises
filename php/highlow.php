@@ -35,7 +35,7 @@ while ($number != $rand) {
 	$guesses++;
 }
 
-	echo "It took you $guesses guesses to get the answer\n";
+	echo "It took you $guesses tries to get the correct answer.\n";
 
 exit(0);
 
