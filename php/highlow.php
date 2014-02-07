@@ -9,7 +9,7 @@ $number = fgets(STDIN);
 
 // Output the user's response.
 // If lower than correct response, ask user to guess higher.
-if ($number < $rand) {  
+while if ($number < $rand) {  
 	fwrite(STDOUT, 'Guess higher');
 }
 // If lower than correct response, ask user to guess lower.
