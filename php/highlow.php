@@ -1,9 +1,6 @@
 <?php
 
-if ($argc == 3) {
-	//Echo them out directly.
-	echo "arg1 is {$argv[1]} and arg2 is {$argv[2]}\n";
-}	
+$number = $rand(1,100);
 $guesses = 0;
 
 
@@ -41,10 +38,5 @@ while ($number != $rand) {
 	echo "It took you $guesses tries to get the correct answer.\n";
 
 exit(0);
-
-// If there are 2 arguments and filename.
-
-
-
 
 ?>
