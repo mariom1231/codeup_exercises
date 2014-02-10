@@ -1,5 +1,5 @@
 <?php
 // Expr1 is the initializer, Expr2 is the condition, Expr3 is the implementation.
-for ($a = 1; $a <= 5; $a++) {
-	echo "\$a has a value of {$a}\n";
+for ($i = 0; $i <= 100; $i += 2) {
+	echo "\$i has a value of {$i}\n";
 }
