@@ -1,9 +1,9 @@
 <?php
 
 
-$a = 5;
-$b = 10;
-$c = '10';
+$a = 10;
+$b = 40;
+$c = '40';
 
 if ($a < $b) { 
 	echo "$a is less than $b\n";
