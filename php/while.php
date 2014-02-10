@@ -1,8 +1,8 @@
 <?php
 
-$test = 5;
-
-while ($test <= 15) {
-	echo "{$test}\n";
-	$test++;
+$a = 1;
+while ($a <= 5) {
+	echo "\$a is equal to {$a}\n";
+	$a++;
 }
+
