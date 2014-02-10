@@ -1,5 +1,9 @@
 <?php
 
+for ($i = 0; $i <= 100; $i+= 2) {
+	echo "\$i has a value of {$i}\n";
+}
+
 // Prompt user for starting number, ending number
 
 // Display all numbers from starting to ending using for loop
