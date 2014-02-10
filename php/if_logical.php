@@ -19,11 +19,11 @@ if ($x > 0 || $x < 10) {
 // repeat the if statement for $y and $z.
 
 if ($y > 0 || $y < 10) {
-	echo "$y is greater than 0 AND less than 10\n";
+	echo "$y is greater than 0 OR less than 10\n";
 }
 
 if ($z > 0 || $z < 10) {
-	echo "$z is greater than 0 AND less than 10\n";
+	echo "$z is greater than 0 OR less than 10\n";
 }
 
 
