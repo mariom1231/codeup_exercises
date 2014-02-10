@@ -7,9 +7,7 @@ $c = '10';
 
 if ($a < $b) { 
 	echo "$a is less than $b\n";
-}
-
-if($b > $a) {
+} else {
 	echo "$b is greater than $a\n";
 }
 
