@@ -1,8 +1,6 @@
 <?php
-
-$number = $rand(1,100);
-$guesses = 0;
-
+// Game picks a random number between 1 and 100.
+$number = mt_rand(1, 100);
 
 // Prompt user to guess a number.
 fwrite(STDOUT, "Guess a number between 1 and 100?\n");
@@ -15,27 +13,16 @@ $number = fgets(STDIN);
 while ($number != $rand) {
 
 	if ($number < $rand) {  
-		fwrite(STDOUT, "Guess higher\n");
+		fwrite(STDOUT, "Guess HIGHER\n");
 	}
 // If lower than correct response, ask user to guess lower.
 	elseif ($number > $rand) {
-		fwrite(STDOUT, "Guess lower\n");
+		fwrite(STDOUT, "Guess LOWER\n");
 	}
 // If correct, say, Great job!
-	else {
-		fwrite(STDOUT, "Great job! You are awesome!\n");
-	}
+fwrite(STDOUT, "Great job! You are awesome!\n");
 
-	// Prompt user to guess a number.
-	fwrite(STDOUT, "Wrong. Try Again.\n");
-
-	// Get the input from the user.
-	$number = fgets(STDIN);
-
-	$guesses++;
-}
-
-	echo "It took you $guesses tries to get the correct answer.\n";
+fwrite(STDOUT, "It took you $guesses tries to get the correct answer.\n";
 
 exit(0);
 
