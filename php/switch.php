@@ -5,36 +5,38 @@ date_default_timezone_set('America/Chicago');
 
 // Get Day of Week as number
 // 1 (for Monday) through 7 (for Sunday)
-$day_of_week = rand(1, 7);
+$day_of_week = date('N');
 
-switch(gettype($day_of_week)) {
+switch($day_of_week) {
     // Output Monday
-    case 'Monday':
-    	echo 'The day is Monday';
+    case 1:
+    	echo '$day_of_week is Monday';
     	break;
         // Output Tuesday
-    case 'Tuesday':
-    	echo 'The day is Tuesday';
+    case 2:
+    	echo '$day_of_week is Tuesday';
     	break;
         // Output Wednesday
-    case 'Wednesday':
-    	echo 'The day is Wednesday';
+    case 3:
+    	echo '$day_of_week is Wednesday';
     	break;
     	// Output Thursday
-    case 'Thursday':
-    	echo 'The day is Thursday';
+    case 4:
+    	echo '$day_of_week is Thursday';
     	break;
     	// Output Friday
-    case 'Friday':
-    	echo 'The day is Friday';
+    case 5:
+    	echo '$day_of_week is Friday';
     	break;
     	// Output Saturday
-    case 'Saturday':
-    	echo 'The day is Saturday';
+    case 6:
+    	echo '$day_of_week is Saturday';
     	break;
     	// Output Sunday
-    case 'Sunday':
-    	echo 'The day is Sunday';
+    case 7:
+    	echo '$day_of_week is Sunday';
     	break;	
-
+    default:
+    	echo 'Not a day of the week';
+    	break;
 }
