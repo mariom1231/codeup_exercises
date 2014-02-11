@@ -1,12 +1,17 @@
 <?php
 
-is_numeric(11);
+$a = 1;
+$c = "test";
 
-function add($a, $b = 0) {
-	
-	var_dump($b);
-	echo $a + $b . PHP_EOL;
+echo "\$a outside the function is: $a\n";
 
+function add($a, $b) {
+
+echo "\$a outside the function is: $a\n";
+echo "\$c outside the function is: $a\n";
+	echo ($a + $b) . "\n";
 }
 
-add(4);
+add(10, 11);
+
+echo "\$a outside function is : $a\n";
