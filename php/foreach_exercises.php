@@ -22,3 +22,15 @@ for each ($data as $item) {
 }
 
 ?>
+
+<?php
+
+for ($i = 0); $i < count($colors); I++) {
+	$color = $colors[$i];
+	echo $color . "\n";
+}
+}
+
+foreach ($colors as $color) {
+	echo $color . "\n";
+}
