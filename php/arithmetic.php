@@ -2,7 +2,7 @@
 
 function add($num1, $num2) {
    if (is_numeric($num1) && is_numeric($num2)) {
-	echo $num1 + $num2 . PHP_EOL;
+		echo $num1 + $num2 . PHP_EOL;
 	} else {
 		echo 'ERROR! Both args should be numbers' . PHP_EOL;
 	}
@@ -10,7 +10,7 @@ function add($num1, $num2) {
 
 function subtract($num1, $num2) {
    if (is_numeric($num1) && is_numeric($num2)) {
-	echo $num1 - $num2 . PHP_EOL;
+		echo $num1 - $num2 . PHP_EOL;
 	} else {
 		echo 'ERROR! Both args should be numbers' . PHP_EOL;
 	}
@@ -18,7 +18,7 @@ function subtract($num1, $num2) {
 
 function multiply($num1, $num2) {
    if (is_numeric($num1) && is_numeric($num2)) {
-	echo $num1 * $num2 . PHP_EOL;
+		echo $num1 * $num2 . PHP_EOL;
 	} else {
 		echo 'ERROR! Both args should be numbers' . PHP_EOL;
 	}
@@ -26,7 +26,9 @@ function multiply($num1, $num2) {
 
 function divide($num1, $num2) {
    if (is_numeric($num1) && is_numeric($num2)) {
-	echo $num1 / $num2 . PHP_EOL;
+		if ($num2 == 0) {
+		echo 'ERROR! You cannot divide by 0' . PHP_EOL;
+}		else echo $num1 / $num2 . PHP_EOL;
 	} else {
 		echo 'ERROR! Both args should be numbers' . PHP_EOL;
 	}
@@ -34,14 +36,16 @@ function divide($num1, $num2) {
 
 function modulus($num1, $num2) {
    if (is_numeric($num1) && is_numeric($num2)) {
-	echo $num1 % $num2 . PHP_EOL;
+		if ($num2 == 0) {
+		echo 'ERROR! You cannot divide by 0' . PHP_EOL;
+}		else echo $num1 % $num2 . PHP_EOL;
 	} else {
 		echo 'ERROR! Both args should be numbers' . PHP_EOL;
 	}
 }
 
-$num1 = cat;
-$num2 = 12;
+$num1 = 30;
+$num2 = 0;
 
 add($num1, $num2);
 subtract($num1, $num2);
@@ -50,3 +54,5 @@ divide($num1, $num2);
 modulus($num1, $num2);
 
 ?>
+
+	
