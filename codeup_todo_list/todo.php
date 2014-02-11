@@ -8,7 +8,7 @@ do {
     // Iterate through list items
     foreach ($items as $key => $item) {
         $key++;
-        // Alt for line 10: $key2 = $key + 1;
+        // Alt for line 10: $key2 = $key + 1; or $key2 = $key++
         // Display each item and a newline
         echo "[{$key}] {$item}\n";
     }
@@ -33,6 +33,7 @@ do {
         // Get array key
         $key = trim(fgets(STDIN));
         // Remove from array
+        $key--;
         unset($items[$key]);
     }
 // Exit when input is (Q)uit
