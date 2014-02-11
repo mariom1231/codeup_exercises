@@ -27,19 +27,21 @@ function multiply($num1, $num2) {
 
 function divide($num1, $num2) {
    if (validate($num1, $num2)) {
-		return $num1 / $num2 . PHP_EOL;
-		if ($num2 == 0) {
+		if ($num2 !== 0) {
+			return $num1 / $num2 . PHP_EOL;
 		} else {
-        return "FALSE" . PHP_EOL;
+        	return FALSE;
+    	}
     }    
 }
 
 function modulus($num1, $num2) {
 	if (validate($num1, $num2)) {
-		return $num1 % $num2 . PHP_EOL;
-		if ($num2 == 0) {
+		if ($num2 != 0) {
+			return $num1 % $num2 . PHP_EOL;
 		} else {
-        return "FALSE" . PHP_EOL;
+        	return false;
+    	}
     }    
 }
 
@@ -51,4 +53,3 @@ subtract($num1, $num2);
 multiply($num1, $num2);
 divide($num1, $num2);
 modulus($num1, $num2);
-
