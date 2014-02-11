@@ -1,23 +1,43 @@
 <?php
 
 function add($num1, $num2) {
-    echo $num1 + $num2 . PHP_EOL;
+   if (is_numeric($num1) && is_numeric($num2)) {
+	echo $num1 + $num2 . PHP_EOL;
+	} else {
+		echo 'ERROR! Both args should be numbers' . PHP_EOL;
+	}
 }
 
 function subtract($num1, $num2) {
-    echo $num1 - $num2 . PHP_EOL;
+   if (is_numeric($num1) && is_numeric($num2)) {
+	echo $num1 + $num2 . PHP_EOL;
+	} else {
+		echo 'ERROR! Both args should be numbers' . PHP_EOL;
+	}
 }
 
 function multiply($num1, $num2) {
-    echo $num1 - $num2 . PHP_EOL;
+   if (is_numeric($num1) && is_numeric($num2)) {
+	echo $num1 + $num2 . PHP_EOL;
+	} else {
+		echo 'ERROR! Both args should be numbers' . PHP_EOL;
+	}
 }
 
 function divide($num1, $num2) {
-    echo $num1 / $num2 . PHP_EOL;
+   if (is_numeric($num1) && is_numeric($num2)) {
+	echo $num1 + $num2 . PHP_EOL;
+	} else {
+		echo 'ERROR! Both args should be numbers' . PHP_EOL;
+	}
 }
 
 function modulus($num1, $num2) {
-	echo $num1 % $num2 . PHP_EOL;
+   if (is_numeric($num1) && is_numeric($num2)) {
+	echo $num1 + $num2 . PHP_EOL;
+	} else {
+		echo 'ERROR! Both args should be numbers' . PHP_EOL;
+	}
 }
 
 $num1 = 30;
@@ -28,6 +48,5 @@ subtract($num1, $num2);
 multiply($num1, $num2);
 divide($num1, $num2);
 modulus($num1, $num2);
-add(52, array(1, 2, 3, 4));
 
 ?>
