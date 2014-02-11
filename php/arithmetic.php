@@ -28,4 +28,6 @@ subtract($num1, $num2);
 multiply($num1, $num2);
 divide($num1, $num2);
 modulus($num1, $num2);
+add(52, array(1, 2, 3, 4));
+
 ?>
