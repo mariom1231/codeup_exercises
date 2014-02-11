@@ -40,7 +40,7 @@ function modulus($num1, $num2) {
 	}
 }
 
-$num1 = 30;
+$num1 = cat;
 $num2 = 12;
 
 add($num1, $num2);
