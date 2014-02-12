@@ -31,6 +31,12 @@ function setOrEmpty($nothing, $something) {
 
 }	
 
+// call the function
+setOrEmpty($nothing);
+
+setOrEmpty($something);
+
+
 // Correct: if isset && not empty, 
 // return __ 
 // else 
