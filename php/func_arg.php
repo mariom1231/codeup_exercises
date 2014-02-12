@@ -1,9 +1,8 @@
 <?php 
+$email = 'jason@codeup.com';
 
-$foo = "";
-
-var_dump(isset($foo));
-
+var_dump(isset($email) && !empty($email));
+// Send email
 
 // function add($num1, $num2 = 0) {
 //    if (is_numeric($num1) && is_numeric($num2)) {
