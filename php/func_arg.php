@@ -1,9 +1,11 @@
 <?php 
-$student = 'Joe';
+$student = 'ahfdflksfjaslfhaslfh';
 
 function is_valid_name($name) {
-	if (strlen($name) > 1) {
-	return TRUE;
+	if (strlen($name) >  1 && <= 50) {
+		return TRUE;
+		} else {
+		return FALSE;
 	}
 }
 
