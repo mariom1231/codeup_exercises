@@ -1,13 +1,13 @@
 <?php
 
-function add($num1, $num2) {
-	echo ($num1 + $num2) . PHP_EOL;
+function paramarevalid($num1, $num2) {
+	return (is_numeric($num1) && (is_numeric($num2));
 }
 
-$first = 30;
-$second = 20;
+// $first = 30;
+// $second = 20;
 
-add($first, $second);
+// add($first, $second);
 
 //$sum = (20 + 22) . PHP_EOL;
 //$sum2 = (35 + 7) . PHP_EOL; 
