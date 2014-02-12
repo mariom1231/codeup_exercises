@@ -1,13 +1,13 @@
 <?php 
-$student = $array(
-'first_name' => 'Izzy', 'last_name' => 'R');
+$student = 'Joe';
 
-$student['first_name'];
-
-if (array_key_exists('middle_name', $student)); {
-	echo $student['middle_name'];
+function is_valid_name($name) {
+	if (strlen($name) > 1) {
+	return TRUE;
+	}
 }
 
+var_dump(is_valid_name($student));
 
 // Send email
 
