@@ -7,6 +7,8 @@ $array = array(1,2,3);
 // Both NULL and " " are considered EMPTY
 // array (1,2,3) is not considered EMPTY
 
+// Create a funciton that checks if a variable is set or empty, and display "$variable_name is SET|EMPTY"
+
 // TEST: If var $nothing is set, display '$nothing is SET'
 
 // function checkvalue($nothing, $something, $array) {
@@ -14,20 +16,22 @@ $array = array(1,2,3);
 // }
 
 function setorempty($nothing, $something) {
-	if (isset($nothing)) {
-	    echo "$nothing is SET";
+	if (empty($var)) {
+	    echo "$var is EMPTY";
 // TEST: If var $nothing is empty, display '$nothing is EMPTY'
-	} else (empty($nothing)) {
-		echo "$nothing is EMPTY";
+	} else {
+		echo "$var is not EMPTY";
 	}
 // TEST: If var $something is set, display '$something is SET'
-	if (isset($something)) {
-		echo "$something is SET";
-	} else (empty($something)) {
-		echo "$something" is EMPTY;
+	if (isset($var)) {
+		echo "$var is SET";
+	} else {
+		echo "$var is not SET";
 	}
 
-}
+}	
+
+
 
 
 
@@ -37,4 +41,11 @@ function setorempty($nothing, $something) {
 
 // Serialize the array $array, and output the results
 
+// $serialize = $serialize($array);
+//		echo  "$serialize";
+
+
 // Unserialize the array $array, and output the results
+
+// $unserialize = $unserialize($serialized);
+// 		echo "unserialized";
