@@ -1,7 +1,14 @@
 <?php 
-$email = 'jason@codeup.com';
+$student = $array(
+'first_name' => 'Izzy', 'last_name' => 'R');
 
-var_dump(isset($email) && !empty($email));
+$student['first_name'];
+
+if (array_key_exists('middle_name', $student)); {
+	echo $student['middle_name'];
+}
+
+
 // Send email
 
 // function add($num1, $num2 = 0) {
