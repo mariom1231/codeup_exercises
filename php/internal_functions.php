@@ -10,19 +10,24 @@ $array = array(1,2,3);
 // TEST: If var $nothing is set, display '$nothing is SET'
 
 // function checkvalue($nothing, $something, $array) {
-		//echo;
+		//echo " ";
 // }
-if (isset($nothing)) {
+
+function setorempty($nothing, $something) {
+	if (isset($nothing)) {
 	    echo "$nothing is SET";
 // TEST: If var $nothing is empty, display '$nothing is EMPTY'
-elseif (empty($nothing)) {
+	} else (empty($nothing)) {
 		echo "$nothing is EMPTY";
-}
+	}
 // TEST: If var $something is set, display '$something is SET'
-if (isset($something)) {
+	if (isset($something)) {
 		echo "$something is SET";
-}
+	} else (empty($something)) {
+		echo "$something" is EMPTY;
+	}
 
+}
 
 
 
