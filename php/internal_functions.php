@@ -15,7 +15,7 @@ $array = array(1,2,3);
 		//echo " ";
 // }
 
-function setorempty($nothing, $something) {
+function setOrEmpty($nothing, $something) {
 	if (empty($var)) {
 	    echo "$var is EMPTY";
 // TEST: If var $nothing is empty, display '$nothing is EMPTY'
@@ -31,7 +31,10 @@ function setorempty($nothing, $something) {
 
 }	
 
-
+// Correct: if isset && not empty, 
+// return __ 
+// else 
+// return __
 
 
 
@@ -41,11 +44,13 @@ function setorempty($nothing, $something) {
 
 // Serialize the array $array, and output the results
 
-// $serialize = $serialize($array);
+// $serial = $serialize($array);
 //		echo  "$serialize";
-
+// Correct ^^: var_dump($serial);
 
 // Unserialize the array $array, and output the results
 
-// $unserialize = $unserialize($serialized);
+// $unserial = $unserialize($serialize);
 // 		echo "unserialized";
+// Correct ^^: var_dump($unserial);
+
