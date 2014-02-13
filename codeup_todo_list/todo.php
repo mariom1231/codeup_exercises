@@ -68,8 +68,6 @@ function list_items($list) {
         // Add entry to list array
         $items[] = get_input();
 
-
-
 // Ask the user if they want to add it to the beginning or end of the list.
         echo 'Would you like to add this item to the (B)eginning or the (E)nd of the list? ';
 
@@ -79,10 +77,11 @@ function list_items($list) {
         
         if ($input == 'B') {
             array_push($items, 'new first item ');
-            elseif ($input == 'E') {
+            
+        } elseif ($input == 'E') {
                 array_unshift($items, 'new last item ');
             }
-        }
+        
 
         
 
@@ -108,9 +107,9 @@ function list_items($list) {
 
         if($input == 'F') {
             array_shift($items, 'remove first item ');
-            elseif ($input == 'L') {
-                array_pop($items, 'remove last item ');
-            }
+            
+        } elseif ($input == 'L') {
+            array_pop($items, 'remove last item ');
         }
 
 
