@@ -6,7 +6,7 @@ function humanized_list($string) {
 	$array = explode(', ', $string);
 	$last_item = array_pop($array);
 
-	$newarray = implode(', ', $array) . ", and " . $last_item . PHP_EOL;
+	$newarray = implode(', ', $array) . ", and " . $last_item;
 	return $newarray;
 
 }
@@ -27,7 +27,7 @@ $famous_fake_physicists = humanized_list($physicists_string);
 // 	echo $famous_fake_physicists;
 // echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}.";
 
-	echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}. " . PHP_EOL;
+	echo "Some of the most famous fictional theoretical physicists are $famous_fake_physicists. " . PHP_EOL;
 
 	
 ?>
