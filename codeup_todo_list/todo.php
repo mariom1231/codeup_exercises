@@ -1,6 +1,6 @@
 <?php
 
-// Create array to hold list of todo items
+// Create empty array to hold list of todo items
 $items = array();
 
 // // List array items formatted for CLI
@@ -12,12 +12,13 @@ $items = array();
 //     // [2] TODO item 2 - blah
 //     // DO NOT USE ECHO, USE RETURN
 // }
-    $string = '';
-    function list_items($array) {
     
-    $items ($key + 1);
-    foreach ($array as $key => $value) {
-        $string .= $value . PHP_EOL;
+    function list_items($list) {
+    $string = '';
+    
+    foreach ($list as $key => $value) {
+        $items = $key + 1;
+        $string .= '[' . ($key + 1) . '] ' . $items . PHP_EOL;
         
         return $string;
     }
@@ -45,7 +46,7 @@ function list_items($list) {
 
     foreach ($list as $key => $value) {
         
-        $result .= " . "[$key + 1]" . $value" . PHP_EOL; 
+        $result .= '[' . ($key + 1) . ']' . $value . PHP_EOL; 
     }
     
     return $result;
@@ -59,8 +60,6 @@ function list_items($list) {
     echo '(N)ew item, (R)emove item, (S)ort, or (Q)uit : ';
 
     // Get the input from user
-    // Use trim() to remove whitespace and newlines
-    $input = strtoupper(trim(fgets(STDIN)));      
     $input = get_input(TRUE);    
 
     // Check for actionable input
@@ -76,9 +75,20 @@ function list_items($list) {
 
         // Remove from array
         unset($items[$key - 1]);
-    } elseif ($input = 'S') {
-        echo 'How would you like to sort: ';    
+        $items = array($items);
+    } elseif ($input == 'S') {
+        // How do you want to sort?
+        echo 'How would you like to sort: (A)-Z, or (Z)-A? ';
+        $sortBy = get_input(TRUE);
+        if ($sortBy) == 'A') {
+            $sort($items);
+        } elseif ($sortBy == 'Z') (
+            rsort($items);
+
     }
+
+}
+
 // Exit when input is (Q)uit
 } while ($input != 'Q');
 
