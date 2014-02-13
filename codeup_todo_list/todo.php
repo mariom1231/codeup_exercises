@@ -67,6 +67,25 @@ function list_items($list) {
         echo 'Enter item: ';
         // Add entry to list array
         $items[] = get_input();
+
+
+
+// Ask the user if they want to add it to the beginning or end of the list.
+        echo 'Would you like to add this item to the (B)eginning or the (E)nd of the list? ';
+
+// Default to end if no input is given.
+// PUSH = add to END, UNSHIFT = add to BEG
+// If adding to (B) of the list, do this. Else, do this instead, add to the (E).
+        
+        if ($input == 'B') {
+            array_push($items, 'new first item ');
+            elseif ($input == 'E') {
+                array_unshift($items, 'new last item ');
+            }
+        }
+
+        
+
     } elseif ($input == 'R') {
         echo 'Enter item number to remove: ';
         
@@ -76,6 +95,25 @@ function list_items($list) {
         // Remove from array
         unset($items[$key - 1]);
         $items = array($items);
+
+// Allow a user to enter F at the main menu to remove the first item on the
+// list. This feature will not be added to the menu, and will be a special
+// feature that is only available to "power users". Also add an L option that
+// grabs and removes the last item in the list.
+// SHIFT = remove from BEG of array, POP = remove from the END 
+
+    // If removing the (F) item, do this. Else 
+
+        echo 'Would you like to remove the (F)irst item or the (L)ast item from the list? ';
+
+        if($input == 'F') {
+            array_shift($items, 'remove first item ');
+            elseif ($input == 'L') {
+                array_pop($items, 'remove last item ');
+            }
+        }
+
+
     } elseif ($input == 'S') {
         // How do you want to sort?
         echo 'How would you like to sort: (A)-Z, or (Z)-A? ';
