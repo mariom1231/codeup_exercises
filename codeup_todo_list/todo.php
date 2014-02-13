@@ -80,14 +80,15 @@ function list_items($list) {
         // How do you want to sort?
         echo 'How would you like to sort: (A)-Z, or (Z)-A? ';
         $sortBy = get_input(TRUE);
-        if ($sortBy) == 'A') {
+        if ($sortBy == 'A') {
             $sort($items);
-        } elseif ($sortBy == 'Z') (
+        } elseif ($sortBy == 'Z') {
             rsort($items);
+        }
 
     }
 
-}
+
 
 // Exit when input is (Q)uit
 } while ($input != 'Q');
