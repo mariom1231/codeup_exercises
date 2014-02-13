@@ -21,13 +21,13 @@ $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mal
 $famous_fake_physicists = humanized_list($physicists_string);
 
 // Output sentence
-	echo $famous_fake_physicists;
+//	echo $famous_fake_physicists;
 
 // $famous_fake_physicists = implode(', and [final item])', $physicists_string);
 // 	echo $famous_fake_physicists;
 // echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}.";
 
-//	echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}.";
+	echo "Some of the most famous fictional theoretical physicists are {$famous_fake_physicists}. " . PHP_EOL;
 
 	
 ?>
