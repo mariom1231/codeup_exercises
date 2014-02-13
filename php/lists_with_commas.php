@@ -1,13 +1,14 @@
 <?php
 
 // Converts array into list n1, n2, ..., and n3
-function humanized_list($string) {
+function humanized_list($string, $sort = FALSE) {
   // Your solution goes here!
 	$array = explode(', ', $string);
+	sort($exploded);
 	$last_item = array_pop($array);
 
-	$newarray = implode(', ', $array) . ", and " . $last_item;
-	return $newarray;
+	$result = implode(', ', $array) . ", and " . $last_item;
+	return $result;
 
 }
 
@@ -21,7 +22,7 @@ $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mal
 $famous_fake_physicists = humanized_list($physicists_string);
 
 // Output sentence
-//	echo $famous_fake_physicists;
+	echo $famous_fake_physicists;
 
 // $famous_fake_physicists = implode(', and [final item])', $physicists_string);
 // 	echo $famous_fake_physicists;
