@@ -3,17 +3,11 @@
 // Create empty array to hold list of todo items
 $items = array();
 
-// // List array items formatted for CLI
-// function list_items($list)
-// {
-//     // Return string of list items separated by newlines.
-//     // Should be listed [KEY] Value like this:
-//     // [1] TODO item 1
-//     // [2] TODO item 2 - blah
-//     // DO NOT USE ECHO, USE RETURN
-// }
+// List array items formatted for CLI
+// Return string of list items separated by newlines.
+
     
-    function list_items($list) {
+function list_items($list) {
     $string = '';
     
     foreach ($list as $key => $value) {
@@ -27,10 +21,7 @@ $items = array();
 
 // // Get STDIN, strip whitespace and newlines, 
 // // and convert to uppercase if $upper is true
-// function get_input($upper = FALSE) 
-// {
-//     // Return filtered STDIN input
-// }
+
 
 function get_input($upper = FALSE) {
     $input = (trim(fgets(STDIN)));
@@ -40,18 +31,6 @@ function get_input($upper = FALSE) {
 // The loop!
 do {
         // Echo the list produced by the function
-function list_items($list) {
-
-    $result = '';
-
-    foreach ($list as $key => $value) {
-        
-        $result .= '[' . ($key + 1) . ']' . $value . PHP_EOL; 
-    }
-    
-    return $result;
-
-}
 
     echo list_items($items) . PHP_EOL;
     
@@ -64,26 +43,24 @@ function list_items($list) {
 
     // Check for actionable input
     if ($input == 'N') {
+// Ask the user if they want to add it to the beginning or end of the list.
+        echo 'Would you like to add this item to the (B)eginning or the (E)nd of the list? ';
+        $addTo = get_input(TRUE);
         echo 'Enter item: ';
         // Add entry to list array
         $items[] = get_input();
-
-// Ask the user if they want to add it to the beginning or end of the list.
-        echo 'Would you like to add this item to the (B)eginning or the (E)nd of the list? ';
 
 // Default to end if no input is given.
 // PUSH = add to END, UNSHIFT = add to BEG
 // If adding to (B) of the list, do this. Else, do this instead, add to the (E).
         
         if ($input == 'B') {
-            array_push($items, 'new first item ');
+            array_unshift($items, 'new first item ');
             
         } elseif ($input == 'E') {
-                array_unshift($items, 'new last item ');
-            }
-        
+                array_push($items, 'new last item ');
+            }        
 
-        
 
     } elseif ($input == 'R') {
         echo 'Enter item number to remove: ';
