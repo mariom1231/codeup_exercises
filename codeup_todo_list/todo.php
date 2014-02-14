@@ -29,14 +29,13 @@ function get_input($upper = FALSE) {
 }
 // By using the array function explode() and using the newline character as a
 // delimiter, we can break the contents by line into array elements.
-function read_file($filename {
-$filename = "cities.txt";
-$handle = fopen($filename, "r");
-$contents = fread($handle, filesize($filename));
-$contents_array = explode("\n", $contents);
-fclose($handle);
+function read_file($filename) {
+    $handle = fopen($filename, "r");
+    $contents = fread($handle, filesize($filename));
+    $contents_array = explode("\n", $contents);
+    fclose($handle);
 // Output $contents_array
-return $contents_array;
+    return $contents_array;
 
 }
 
@@ -56,7 +55,7 @@ do {
     if ($input == 'O') {
         echo 'Enter the file path to have it loaded. ';
         $filename = get_input();
-        $items = 
+        read_file($filename);
      
     } elseif ($input == 'N') {
 // Ask the user if they want to add it to the beginning or end of the list.
@@ -65,6 +64,7 @@ do {
         echo 'Enter item: ';
         // Add entry to list array
         $items[] = get_input();
+            }
 
 // Default to end if no input is given.
 // PUSH = add to END, UNSHIFT = add to BEG
@@ -97,6 +97,8 @@ do {
     // If removing the (F) item, do this. Else 
 
         echo 'Would you like to remove the (F)irst item or the (L)ast item from the list? ';
+
+    }
 
         if($input == 'F') {
             array_shift($items, 'remove first item ');
