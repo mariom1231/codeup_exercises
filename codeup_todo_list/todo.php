@@ -27,6 +27,18 @@ function get_input($upper = FALSE) {
     $input = (trim(fgets(STDIN)));
     return $upper ? strtoupper($input) : $input;
 }
+// By using the array function explode() and using the newline character as a
+// delimiter, we can break the contents by line into array elements.
+function read_file($filename {
+$filename = "cities.txt";
+$handle = fopen($filename, "r");
+$contents = fread($handle, filesize($filename));
+$contents_array = explode("\n", $contents);
+fclose($handle);
+// Output $contents_array
+return $contents_array;
+
+}
 
 // The loop!
 do {
@@ -36,13 +48,17 @@ do {
     
 
     // Show the menu options
-    echo '(N)ew item, (R)emove item, (S)ort, or (Q)uit : ';
+    echo '(O)pen file, (N)ew item, (R)emove item, (S)ort, or (Q)uit : ';
 
     // Get the input from user
-    $input = get_input(TRUE);    
+    $input = get_input(TRUE);
 
-    // Check for actionable input
-    if ($input == 'N') {
+    if ($input == 'O') {
+        echo 'Enter the file path to have it loaded. ';
+        $filename = get_input();
+        $items = 
+     
+    } elseif ($input == 'N') {
 // Ask the user if they want to add it to the beginning or end of the list.
         echo 'Would you like to add this item to the (B)eginning or the (E)nd of the list? ';
         $addTo = get_input(TRUE);
@@ -101,8 +117,6 @@ do {
         }
 
     }
-
-
 
 // Exit when input is (Q)uit
 } while ($input != 'Q');
