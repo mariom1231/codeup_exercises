@@ -6,7 +6,6 @@ $items = array();
 // List array items formatted for CLI
 // Return string of list items separated by newlines.
 
-    
 function list_items($list) {
     $string = '';
     
@@ -18,10 +17,8 @@ function list_items($list) {
     }
 }
 
-
 // // Get STDIN, strip whitespace and newlines, 
 // // and convert to uppercase if $upper is true
-
 
 function get_input($upper = FALSE) {
     $input = (trim(fgets(STDIN)));
@@ -30,12 +27,23 @@ function get_input($upper = FALSE) {
 // By using the array function explode() and using the newline character as a
 // delimiter, we can break the contents by line into array elements.
 function read_file($filename) {
-    $handle = fopen($filename, "r");
+    $handle = fopen($filename, 'r');
     $contents = fread($handle, filesize($filename));
     $contents_array = explode("\n", $contents);
     fclose($handle);
+
 // Output $contents_array
     return $contents_array;
+
+}
+
+function write_file($array) {
+    $handle = fopen($filename, 'w');
+    foreach ($array as $item) {
+    fwrite($handle, PHP_EOL . $item);
+    }
+    
+    fclose($handle);
 
 }
 
@@ -47,18 +55,33 @@ do {
     
 
     // Show the menu options
-    echo '(O)pen file, (N)ew item, (R)emove item, (S)ort, or (Q)uit : ';
+    echo '(O)pen file, (N)ew item, (R)emove item, (S)ave, (SO)rt, or (Q)uit : ';
 
     // Get the input from user
     $input = get_input(TRUE);
 
     if ($input == 'O') {
-        echo 'Enter the file path to have it loaded. ';
+        echo 'Enter the filename. ';
         $filename = get_input();
         read_file($filename);
-     
+
+// When (S)ave is chosen, the user should be able to enter the path to a file
+// to have it save. Use fwrite() with the mode that starts at the beginning of
+// a file and removes all the file contents, or creates a new one if it does
+// not exist. After save, alert the user the save was successful and redisplay
+// the list and main menu.
+        echo '(S)ave file? Enter (Y)es or (N)o. ';
+
+        if ($input == 'S') {
+        $filename = get_input();
+        write_file($filename);
+        
+        }
+      
+        echo "Save was successful."
+    // // Redirect to main menu.
+
     } elseif ($input == 'N') {
-// Ask the user if they want to add it to the beginning or end of the list.
         echo 'Would you like to add this item to the (B)eginning or the (E)nd of the list? ';
         $addTo = get_input(TRUE);
         echo 'Enter item: ';
@@ -87,14 +110,6 @@ do {
         // Remove from array
         unset($items[$key - 1]);
         $items = array($items);
-
-// Allow a user to enter F at the main menu to remove the first item on the
-// list. This feature will not be added to the menu, and will be a special
-// feature that is only available to "power users". Also add an L option that
-// grabs and removes the last item in the list.
-// SHIFT = remove from BEG of array, POP = remove from the END 
-
-    // If removing the (F) item, do this. Else 
 
         echo 'Would you like to remove the (F)irst item or the (L)ast item from the list? ';
 
