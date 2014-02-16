@@ -13,10 +13,24 @@
 
 // Exercise 2: Alter your loop to count backwards by 5's from 100 to -10.
 
-$a = 100;
+
+// $a = 100;
+
+// do {
+// 	echo "$a\n";
+// 	$a = $a - 5;
+
+// } while ($a >= -10);
+
+
+// Exercise 3: Create a do-while loop that starts at 2, and returns the result
+// $a * $a on each line while $a is less than 1,000,000. Output should equal:
+
+$a = 2;
 
 do {
 	echo "$a\n";
-	$a = $a - 5;
+	$a = $a * $a;
 
-} while ($a >= -10);
+} while ($a < 1000000);
+
